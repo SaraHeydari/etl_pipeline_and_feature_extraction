@@ -97,22 +97,22 @@ nordic-data-pipeline/
 
 ### Data Quality Issues Addressed
 
-For customers.csv:
-    - Standardize country codes to uppercase
-    - Standardize email addresses to Lowercase
-    - Remove rows with null customer_id
-    - Only kepp rows with valid country codes (the 4 Nordic countries)
-    - Remove duplicate customer_ids (keep the first entry)
+**For customers.csv**
+- Standardize country codes to uppercase
+- Standardize email addresses to Lowercase
+- Remove rows with null customer_id
+- Only kepp rows with valid country codes (the 4 Nordic countries)
+- Remove duplicate customer_ids (keep the first entry)
 
-For transactions.csv:
-    - Standardize currency to uppercase, fill nulls with "NA"
-    - Standardize category to lowercase, fill nulls/empty with "NA"
-    - Remove rows with invalid amounts (null or <= 0)
-    - Remove rows with null customer_id or null transaction_id
-    - Remove rows with duplicate transaction_ids (keep first)
-    - Remove orphan transactions (transactions with customer IDs that do not exist in preprocessed customers list)
-    - Optionally, infer currency for transactions with NA currency based on customer country (configurable via `config.py`).
-    - For comparability, add amount_in_eur column which includes the transaction values in euros. Conversion rates are defined in `config.py` (should be replaced with time-dependent rates in production)
+**For transactions.csv**
+- Standardize currency to uppercase, fill nulls with "NA"
+- Standardize category to lowercase, fill nulls/empty with "NA"
+- Remove rows with invalid amounts (null or <= 0)
+- Remove rows with null customer_id or null transaction_id
+- Remove rows with duplicate transaction_ids (keep first)
+- Remove orphan transactions (transactions with customer IDs that do not exist in preprocessed customers list)
+- Optionally, infer currency for transactions with NA currency based on customer country (configurable via `config.py`).
+- For comparability, add amount_in_eur column which includes the transaction values in euros. Conversion rates are defined in `config.py` (should be replaced with time-dependent rates in production)
 
 ### Output Files
 
