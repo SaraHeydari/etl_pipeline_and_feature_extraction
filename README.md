@@ -93,7 +93,7 @@ nordic-data-pipeline/
 | File | Description | Records |
 |------|-------------|---------|
 | `customers.csv` | Customer master data | ~5,000 |
-| `transactions.csv` | Transaction history | ~50,000 |
+| `transactions.csv` | Transaction history | ~120,000 |
 
 ### Data Quality Issues Addressed
 
